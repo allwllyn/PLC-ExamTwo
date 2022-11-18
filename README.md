@@ -18,11 +18,11 @@ defined
     separator = Regex("[{}|\\[|\\]|(|)|~]")
 
 b. (15 Points) Define production rules for implementing the mathematical syntax of operators and operands, loops, variable declaration, selection statements<br />
-    &ensp;• Enforce a non PEMDAS (BODMAS) order of operation, must have at least 6 levels of precedence<br />
-    • Keywords cannot use the words while, for, do, if, int, short, long<br />
-        i. Keywords should be unique, if others share your same words, you<br />
+    • Enforce a non PEMDAS (BODMAS) order of operation, must have at least 6 levels of precedence<br />
+    • Keywords cannot use the words while, for, do, if, int, short, long<br />
+        i. Keywords should be unique, if others share your same words, you<br />
     may lose more points than this problem is worth<br />
-    • You must clearly state the structure of your language with production
+    • You must clearly state the structure of your language with production
     rules<br />
 
 c. (10 points) Show whether every rule set in your language conforms to the
@@ -32,11 +32,10 @@ d. (5 points) Make sure it is not ambiguous grammar<br />
 
 e. (15 points) Write a program that process all lexemes in a file by recognizing all
 tokens in a file, and produces a list of those tokens in order<br />
-    • If a group of characters is not defined in your language your program
+    • If a group of characters is not defined in your language your program
     should print an error message stating what went wrong and terminate<br />
-    (stop running)
-    • This program should be written in an Object-Oriented fashion<br />
-    • This program should have comments to describe each method that is
+    • This program should be written in an Object-Oriented fashion<br />
+    • This program should have comments to describe each method that is
     defined<br />
     
 *see Lexical.kt in src/main/kotlin/Analyzer*<br />
@@ -48,13 +47,13 @@ determines if the tokens conform to the correct syntax.<br />
 
 g. (10 points) Create 4 test files that have different names where each should have
 30 or more lexemes that can be converted into tokens<br />
-    • 1 with a at least 5 lexical errors based on the rules you defined<br />
-        i. Detail each error and say why it doesn’t work<br />
-    • 1 with at least 5 syntax errors based on the rules you defined i. Detail each error and say why it doesn’t work<br />
-    • 2 with no errors at all based on the language you created<br />
+    • 1 with a at least 5 lexical errors based on the rules you defined<br />
+        i. Detail each error and say why it doesn’t work<br />
+    • 1 with at least 5 syntax errors based on the rules you defined i. Detail each error and say why it doesn’t work<br />
+    • 2 with no errors at all based on the language you created<br />
 
 h. (20 points) Create a LR (1) parse table for your language. And show the trace of 4
 code samples. Each must have 6 or more tokens.<br />
-    • Table must be provided, and the rules must be listed<br />
-    • 2 code samples must have errors<br />
-    • Show were these samples fail and pass the test<br />
+    • Table must be provided, and the rules must be listed<br />
+    • 2 code samples must have errors<br />
+    • Show were these samples fail and pass the test<br />
