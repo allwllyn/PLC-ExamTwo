@@ -2,7 +2,8 @@
 Programming Language Built on Kotlin
 
 a. (15 Points) Define the rules for recognizing all lexemes as their proper token, and
-clearly define integer token codes for each token required for this language • Should have Regular Grammar, Regular Expression, or Finite Automat
+clearly define integer token codes for each token required for this language <br />
+    • Should have Regular Grammar, Regular Expression, or Finite Automat
 defined
 
     integer literals must end in 't','s','m', or 'b' 
