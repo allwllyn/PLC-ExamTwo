@@ -18,7 +18,7 @@ defined
     separator = Regex("[{}|\\[|\\]|(|)|~]")
 
 b. (15 Points) Define production rules for implementing the mathematical syntax of operators and operands, loops, variable declaration, selection statements<br />
-    • Enforce a non PEMDAS (BODMAS) order of operation, must have at least 6 levels of precedence<br />
+    &ensp;• Enforce a non PEMDAS (BODMAS) order of operation, must have at least 6 levels of precedence<br />
     • Keywords cannot use the words while, for, do, if, int, short, long<br />
         i. Keywords should be unique, if others share your same words, you<br />
     may lose more points than this problem is worth<br />
