@@ -3,5 +3,5 @@ package ViewModels
 class TokenViewModel{
 
     var tokenArray: MutableList<String> = mutableListOf()
-    var varMap: MutableMap<String,Double> = mutableMapOf<String,Double>()
+    var decMap: MutableMap<String,Double> = mutableMapOf<String,Double>()
 }

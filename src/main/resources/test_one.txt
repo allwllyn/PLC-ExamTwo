@@ -1,3 +1,6 @@
+
+start{
 dec tiny 123t~
 dec $Ajladf~
 fact( 3t < 5b){}wrong{}
+}

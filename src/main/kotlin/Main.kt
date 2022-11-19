@@ -12,17 +12,16 @@ import ViewModels.TokenViewModel
  * small : 2 bytes
  * mid : 4 bytes
  * big : 8 bytes
- * `as` loop = for loop
  * `being` loop = while loop
  *  lines terminated with `~`
  *
  * Production Rules ———————————————————————————————————————————————————————
- *
- * <stmt> —> <fact_stmt> | <being_loop> | <assign> | <block>
+ * <program> -> `start` <block>
+ * <stmt> —> <fact> | <being> | <assign> | <block>
  * <block> —> `{` { <stmt> } `}`
- * <fact_stmt> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- * <being_loop> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- * <claim> -> <assert> {== <assert>}
+ * <fact> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
+ * <being> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
+ * <claim> -> <idea> {== <idea>}
  * <bool_expr> -> <claim> {(<|>) <claim>}
  * <expr> -> <term> { (/|*) <term>}
  * <term> -> <factor> {(%|-|+) <factor>}
@@ -51,10 +50,11 @@ fun main() {
 
     //remove whitespace strings
     for (i in 0 until rawTokens.size-1){
-        if(!lex.whitespace.matches(rawTokens[i])){
+        if(!Lexical.whitespace.matches(rawTokens[i])){
             tokens.add(rawTokens[i])
         }
     }
+    viewModel.tokenArray = tokens
     //to see the tokens
     for(i in tokens){
         println(i)
