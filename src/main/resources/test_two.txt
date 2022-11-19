@@ -1,7 +1,7 @@
 
 start{
-dec $testtwo = 39845b~
-dec $testing = 234m~
+((dec $testtwo 39845s~
+dec $testing = 234t~
 dec $andrew = 100m~
-being($andrew > $testing){ 5b % 2m}
+being($andrew > $testing){ 5b % 2m
 }
