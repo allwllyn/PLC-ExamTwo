@@ -22,40 +22,40 @@ defined
 
 b. (15 Points) Define production rules for implementing the mathematical syntax of operators and operands, loops, variable declaration, selection statements<br />
     • Enforce a non PEMDAS (BODMAS) order of operation, must have at least 6 levels of precedence<br />
-    • Keywords cannot use the words while, for, do, if, int, short, long<br />
+    • Keywords cannot use the words while, for, do, if, int, short, long<br/>
         i. Keywords should be unique, if others share your same words, you<br />
     may lose more points than this problem is worth<br />
     • You must clearly state the structure of your language with production
     rules<br />
 
- Rules —————————————————————————————————————————————————————————————————
- Regular expressions for these tokens in the github readme and in Lexical.kt
- declare variables with `dec`
- four integer types:
- tiny : 1 byte
- small : 2 bytes
- mid : 4 bytes
- big : 8 bytes
- being loop = while loop
- lines terminated with ~
+ Rules —————————————————————————————————————————————————————————————————<br/>
+ Regular expressions for these tokens in the github readme and in Lexical.kt<br/>
+ declare variables with dec<br/>
+ four integer types:<br/>
+ tiny : 1 byte<br/>
+ small : 2 bytes<br/>
+ mid : 4 bytes<br/>
+ big : 8 bytes<br/>
+ being loop = while loop<br/>
+ lines terminated with ~<br/>
  
- Production Rules ———————————————————————————————————————————————————————
- <program> -> `start` <block>
- <stmt> —> <fact> | <being> | <assign> | <block>
- <block> —> `{` { <stmt> } `}`
- <fact> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- <being> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- <bool_expr> -> <term> {(<|>|==) <term>}
- <expr> -> <term> { (/|*) <term>}
- <term> -> <factor> {(%|-|+) <factor>}
- <factor> -> `id` | `int_literal` | (<expr>)
- <assign> -> `id` `=` <expr>
+ Production Rules ———————————————————————————————————————————————————————<br/>
+ <program> -> 'start' <block><br/>
+ <stmt> —> <fact> | <being> | <assign> | <block><br/>
+ <block> —> '{' { <stmt> } '}'<br/>
+ <fact> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' <stmt>]<br/>
+ <being> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' <stmt>]<br/>
+ <bool_expr> -> <term> {(<|>|==) <term>}<br/>
+ <expr> -> <term> { (/|*) <term>}<br/>
+ <term> -> <factor> {(%|-|+) <factor>}<br/>
+ <factor> -> 'id' | 'int_literal' | (<expr>)<br/>
+ <assign> -> 'id' '=' <expr><br/>
 
- Precedence order ——————————————————————————————————————————————————————
- —Math Operations—
- Parentheses -> Modulo -> Subtraction -> Addition -> division -> multiplication
- —Boolean Operations—
- Parentheses -> Equal-to -> Less-than -> Greater-than
+ Precedence order ——————————————————————————————————————————————————————<br/>
+ —Math Operations—<br/>
+ Parentheses -> Modulo -> Subtraction -> Addition -> division -> multiplication<br/>
+ —Boolean Operations—<br/>
+ Parentheses -> Equal-to -> Less-than -> Greater-than<br/>
  
 
 c. (10 points) Show whether every rule set in your language conforms to the
