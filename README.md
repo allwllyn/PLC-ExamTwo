@@ -40,7 +40,7 @@ b. (15 Points) Define production rules for implementing the mathematical syntax 
  lines terminated with ~<br/>
  
  Production Rules ———————————————————————————————————————————————————————<br/>
- <program> -> 'start' <block><br/>
+ '<'program> -> 'start' <block><br/>
  <stmt> —> <fact> | <being> | <assign> | <block><br/>
  <block> —> '{' { <stmt> } '}'<br/>
  <fact> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' <stmt>]<br/>
