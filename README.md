@@ -1,9 +1,9 @@
-# PLC-ExamTwo
-Programming Language Built on Kotlin
-
 ## Andrew Llewellyn
 
-## Made with intelliJ - Please clone and run main.kt
+# PLC-ExamTwo
+# Programming Language Built on Kotlin
+
+### Made with intelliJ - Please clone and run main.kt
 
 a. (15 Points) Define the rules for recognizing all lexemes as their proper token, and
 clearly define integer token codes for each token required for this language <br />
@@ -46,7 +46,7 @@ b. (15 Points) Define production rules for implementing the mathematical syntax 
  \<stmt> —> \<fact> | \<being> | \<assign> | \<block><br/>
  \<block> —> '{' { \<stmt> } '}'<br/>
  \<fact> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' \<stmt>]<br/>
- \<being> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' \<stmt>]<br/>
+ \<being> —> \<fact> <br/>
  \<bool_expr> -> \<term> {(<|>|==) \<term>}<br/>
  \<expr> -> \<term> { (/|*) <term>}<br/>
  \<term> -> \<factor> {(%|-|+) \<factor>}<br/>
@@ -63,7 +63,7 @@ b. (15 Points) Define production rules for implementing the mathematical syntax 
 c. (10 points) Show whether every rule set in your language conforms to the
 standard of an LL Grammar.<br />
 
-# There is no left-hand recursion, and no two rules begin the same way, so it is also pairwise disjoint.
+## There is no left-hand recursion, and no two rules begin the same way, so it is also pairwise disjoint.
 
 d. (5 points) Make sure it is not ambiguous grammar<br />
 
@@ -75,12 +75,12 @@ tokens in a file, and produces a list of those tokens in order<br />
     • This program should have comments to describe each method that is
     defined<br />
     
-# see Lexical.kt in src/main/kotlin/Analyzer*<br />
+## see Lexical.kt in src/main/kotlin/Analyzer*<br />
 
 f. (10 points) Write a program or an extension to the above program that
 determines if the tokens conform to the correct syntax.<br />
 
-# see Syntactic.kt in src/main/kotlin/Analyzer*<br />
+## see Syntactic.kt in src/main/kotlin/Analyzer*<br />
 
 g. (10 points) Create 4 test files that have different names where each should have
 30 or more lexemes that can be converted into tokens<br />
