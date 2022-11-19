@@ -1,6 +1,6 @@
 
 start{
-dec tiny 123t~
-dec $Ajladf~
-fact( 3t < 5b){}wrong{}
+dec $newone = 123t~
+dec $asdfke = 234b~
+fact( 3t < 5b){ 5t + 1s }
 }

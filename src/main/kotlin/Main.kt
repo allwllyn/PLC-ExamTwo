@@ -21,8 +21,7 @@ import ViewModels.TokenViewModel
  * <block> —> `{` { <stmt> } `}`
  * <fact> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
  * <being> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- * <claim> -> <idea> {== <idea>}
- * <bool_expr> -> <claim> {(<|>) <claim>}
+ * <bool_expr> -> <term> {(<|>|==) <term>}
  * <expr> -> <term> { (/|*) <term>}
  * <term> -> <factor> {(%|-|+) <factor>}
  * <factor> -> `id` | `int_literal` | (<expr>)
@@ -38,7 +37,7 @@ import ViewModels.TokenViewModel
 fun main() {
     val viewModel = TokenViewModel()
     val lex = Lexical(viewModel)
-    val syn = Syntactic(viewModel)
+
     val fileName = "src/main/resources/test_one.txt"
     //splitter regex splits the string while keeping the delimiters
     val splitter = Regex("(?<=[{}|\\[|\\]|(|)|~|\\s])|(?=[{}|\\[|\\]|(|)|~|\\s])")
@@ -54,7 +53,7 @@ fun main() {
             tokens.add(rawTokens[i])
         }
     }
-    viewModel.tokenArray = tokens
+    val syn = Syntactic(tokens)
     //to see the tokens
     for(i in tokens){
         println(i)
@@ -62,5 +61,6 @@ fun main() {
 
     //call lexical analyzer to count the tokens
     lex.printCount(tokens)
+    syn.startProgram()
 
 }
