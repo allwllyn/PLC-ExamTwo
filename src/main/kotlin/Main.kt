@@ -16,13 +16,15 @@ import ViewModels.TokenViewModel
  *  lines terminated with `~`
  *
  * Production Rules ———————————————————————————————————————————————————————
- * <program> -> `start` <block>
+ * <program> -> `start` <stmt>
  * <stmt> —> <fact> | <being> | <assign> | <block>
  * <block> —> `{` { <stmt> } `}`
  * <fact> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
  * <being> —> `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- * <bool_expr> -> <term> {(<|>|==) <term>}
+ * <bool_expr> -> <bterm> {(<|>|==) <bterm>}
  * <expr> -> <term> { (/|*) <term>}
+ * <bterm> -> <bfactor> {(%|-|+) <bfactor>}
+ * <bfactor> -> `id` | `int_literal` | (<expr>)
  * <term> -> <factor> {(%|-|+) <factor>}
  * <factor> -> `id` | `int_literal` | (<expr>)
  * <assign> -> `id` `=` <expr>
