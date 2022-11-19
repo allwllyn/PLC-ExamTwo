@@ -46,7 +46,7 @@ b. (15 Points) Define production rules for implementing the mathematical syntax 
  \<stmt> —> \<fact> | \<being> | \<assign> | \<block><br/>
  \<block> —> '{' { \<stmt> } '}'<br/>
  \<fact> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' \<stmt>]<br/>
- \<being> —> \<fact> <br/>
+ \<being> —> '('<bool_expr>')' <stmt> <br/>
  \<bool_expr> -> \<term> {(<|>|==) \<term>}<br/>
  \<expr> -> \<term> { (/|*) <term>}<br/>
  \<term> -> \<factor> {(%|-|+) \<factor>}<br/>
