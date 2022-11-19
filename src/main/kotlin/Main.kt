@@ -39,8 +39,8 @@ fun main() {
     val lex = Lexical(viewModel)
 
     val A = "src/main/resources/test_one.txt"
-    val B = "src/main/resources/test_two.txt"
-    val C = "src/main/resources/test_three.txt"
+    val B = "src/main/resources/test_two.txt"//syntax error file
+    val C = "src/main/resources/test_three.txt"//lexical error file
     val D = "src/main/resources/test_four.txt"
     //splitter regex splits the string while keeping the delimiters
     val splitter = Regex("(?<=[{}|\\[|\\]|(|)|~|\\s])|(?=[{}|\\[|\\]|(|)|~|\\s])")
