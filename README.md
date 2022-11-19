@@ -27,36 +27,36 @@ b. (15 Points) Define production rules for implementing the mathematical syntax 
     may lose more points than this problem is worth<br />
     • You must clearly state the structure of your language with production
     rules<br />
- /**
- * Rules —————————————————————————————————————————————————————————————————
- * Regular expressions for these tokens in the github readme and in Lexical.kt
- * declare variables with `dec`
- * four integer types:
- * tiny : 1 byte
- * small : 2 bytes
- * mid : 4 bytes
- * big : 8 bytes
- * `being` loop = while loop
- *  lines terminated with `~`
- *
- * Production Rules ———————————————————————————————————————————————————————
- * <program> -> `start` <block>
- * <stmt> —> <fact> | <being> | <assign> | <block>
- * <block> —> `{` { <stmt> } `}`
- * <fact> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- * <being> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- * <bool_expr> -> <term> {(<|>|==) <term>}
- * <expr> -> <term> { (/|*) <term>}
- * <term> -> <factor> {(%|-|+) <factor>}
- * <factor> -> `id` | `int_literal` | (<expr>)
- * <assign> -> `id` `=` <expr>
- *
- * Precedence order ——————————————————————————————————————————————————————
- * —Math Operations—
- * Parentheses -> Modulo -> Subtraction -> Addition -> division -> multiplication
- * —Boolean Operations—
- * Parentheses -> Equal-to -> Less-than -> Greater-than
- */
+
+ Rules —————————————————————————————————————————————————————————————————
+ Regular expressions for these tokens in the github readme and in Lexical.kt
+ declare variables with `dec`
+ four integer types:
+ tiny : 1 byte
+ small : 2 bytes
+ mid : 4 bytes
+ big : 8 bytes
+ being loop = while loop
+ lines terminated with ~
+ 
+ Production Rules ———————————————————————————————————————————————————————
+ <program> -> `start` <block>
+ <stmt> —> <fact> | <being> | <assign> | <block>
+ <block> —> `{` { <stmt> } `}`
+ <fact> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
+ <being> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
+ <bool_expr> -> <term> {(<|>|==) <term>}
+ <expr> -> <term> { (/|*) <term>}
+ <term> -> <factor> {(%|-|+) <factor>}
+ <factor> -> `id` | `int_literal` | (<expr>)
+ <assign> -> `id` `=` <expr>
+
+ Precedence order ——————————————————————————————————————————————————————
+ —Math Operations—
+ Parentheses -> Modulo -> Subtraction -> Addition -> division -> multiplication
+ —Boolean Operations—
+ Parentheses -> Equal-to -> Less-than -> Greater-than
+ 
 
 c. (10 points) Show whether every rule set in your language conforms to the
 standard of an LL Grammar.<br />
