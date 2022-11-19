@@ -18,7 +18,7 @@ defined
     big = Regex("(-)?\\d+b") //eight byte
     variable = Regex("(\\$)([a-zA-Z_]{6,8})") //variable name
     keyword =  Regex("dec|tiny|small|mid|big|for|while|fact|wrong")
-    operator = Regex("(\\+|-|\\*|/|=)")
+    operator = Regex("(\\+|-|\\*|/|=|%)")
     comparator = Regex("<=|>=|==|<|>|!=|!")
     separator = Regex("[{}|\\[|\\]|(|)|~]")
 
