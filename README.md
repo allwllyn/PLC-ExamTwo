@@ -40,16 +40,16 @@ b. (15 Points) Define production rules for implementing the mathematical syntax 
  lines terminated with ~<br/>
  
  Production Rules ———————————————————————————————————————————————————————<br/>
- '<'program> -> 'start' <block><br/>
- <stmt> —> <fact> | <being> | <assign> | <block><br/>
- <block> —> '{' { <stmt> } '}'<br/>
- <fact> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' <stmt>]<br/>
- <being> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' <stmt>]<br/>
- <bool_expr> -> <term> {(<|>|==) <term>}<br/>
- <expr> -> <term> { (/|*) <term>}<br/>
- <term> -> <factor> {(%|-|+) <factor>}<br/>
- <factor> -> 'id' | 'int_literal' | (<expr>)<br/>
- <assign> -> 'id' '=' <expr><br/>
+ \<program> -> 'start' \<block><br/>
+ \<stmt> —> \<fact> | \<being> | \<assign> | \<block><br/>
+ \<block> —> '{' { \<stmt> } '}'<br/>
+ \<fact> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' \<stmt>]<br/>
+ \<being> —> 'fact' '('<bool_expr>')' <stmt> ['wrong' \<stmt>]<br/>
+ \<bool_expr> -> \<term> {(<|>|==) \<term>}<br/>
+ \<expr> -> \<term> { (/|*) <term>}<br/>
+ \<term> -> \<factor> {(%|-|+) \<factor>}<br/>
+ \<factor> -> 'id' | 'int_literal' | (\<expr>)<br/>
+ \<assign> -> 'id' '=' \<expr><br/>
 
  Precedence order ——————————————————————————————————————————————————————<br/>
  —Math Operations—<br/>
