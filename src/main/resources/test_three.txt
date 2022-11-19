@@ -1,0 +1,8 @@
+
+start{
+dec newone = 123t~
+dec asdfke = 234b~
+factoid( 3t < 5b){ 5t + 1s }
+this is not an accepted line
+these lines will not be recognized
+}

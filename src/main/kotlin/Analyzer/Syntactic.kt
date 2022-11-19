@@ -4,7 +4,6 @@ import ViewModels.TokenViewModel
 import kotlin.system.exitProcess
 
 class Syntactic (tokens: MutableList<String>){
-    var decMap: MutableMap<String,Double> = mutableMapOf<String,Double>()//to store dec assignments
     var tokens = tokens
     var current = 0
     var currentToken = tokens[current]
@@ -12,7 +11,7 @@ class Syntactic (tokens: MutableList<String>){
 
 
     fun startProgram(){
-        println("called start program")
+        println("|——— Syntax Analysis Start ———|")
         if(currentToken == "start"){
             getNextToken()
             statement()
@@ -20,7 +19,7 @@ class Syntactic (tokens: MutableList<String>){
         else{
             error("must start program with \"Start\"")
         }
-        println("program complete")
+        println("|——— Syntax Analysis Complete ———|")
     }
     fun getNextToken(){
         if(current < tokens.size-1){
@@ -126,7 +125,6 @@ class Syntactic (tokens: MutableList<String>){
             getNextToken()
             factor()
         }
-
     }
     fun boolExpression(){
         println("called boolExpression - current token: " + currentToken)
@@ -183,9 +181,6 @@ class Syntactic (tokens: MutableList<String>){
     fun checkEndline(){
         if(currentToken == "~"){
             getNextToken()
-            statement()
         }
     }
-
-
 }

@@ -20,7 +20,7 @@ import ViewModels.TokenViewModel
  * <stmt> —> <fact> | <being> | <assign> | <block>
  * <block> —> `{` { <stmt> } `}`
  * <fact> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
- * <being> —> `fact` `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
+ * <being> —> `(`<bool_expr>`)` <stmt> [`wrong` <stmt>]
  * <bool_expr> -> <term> {(<|>|==) <term>}
  * <expr> -> <term> { (/|*) <term>}
  * <term> -> <factor> {(%|-|+) <factor>}
@@ -38,11 +38,19 @@ fun main() {
     val viewModel = TokenViewModel()
     val lex = Lexical(viewModel)
 
-    val fileName = "src/main/resources/test_one.txt"
+    val A = "src/main/resources/test_one.txt"
+    val B = "src/main/resources/test_two.txt"
+    val C = "src/main/resources/test_three.txt"
+    val D = "src/main/resources/test_four.txt"
     //splitter regex splits the string while keeping the delimiters
     val splitter = Regex("(?<=[{}|\\[|\\]|(|)|~|\\s])|(?=[{}|\\[|\\]|(|)|~|\\s])")
 
-    val rawCode: String = File(fileName).readText()
+    //TODO: Test files, uncomment for testing
+//    val rawCode: String = File(A).readText()
+//    val rawCode: String = File(B).readText()
+//    val rawCode: String = File(C).readText()
+    val rawCode: String = File(D).readText()
+
     viewModel.tokenArray = rawCode.split(splitter) as MutableList<String>
     var rawTokens = viewModel.tokenArray
     var tokens: MutableList<String> = mutableListOf()
@@ -54,6 +62,7 @@ fun main() {
         }
     }
     val syn = Syntactic(tokens)
+    println("|——— Lexical Analysis Start ———|")
     //to see the tokens
     for(i in tokens){
         println(i)
@@ -61,6 +70,8 @@ fun main() {
 
     //call lexical analyzer to count the tokens
     lex.printCount(tokens)
+    println("|——— Lexical Analysis Complete ———|")
+    println()
     syn.startProgram()
 
 }

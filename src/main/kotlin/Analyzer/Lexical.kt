@@ -10,7 +10,7 @@ class Lexical(viewModel: TokenViewModel){
         val big = Regex("(-)?\\d+b") //eight byte
         val dec = Regex("(\\$)([a-zA-Z_]{6,8})") //variable name / identifier
         val keyword =  Regex("dec|tiny|small|mid|big|as|being|fact|wrong")
-        val operator = Regex("(\\+|-|\\*|/|=)")
+        val operator = Regex("(\\+|-|\\*|/|=|%)")
         val comparator = Regex("<=|>=|==|<|>|!=|!")
         val separator = Regex("[{}|\\[|\\]|(|)|~|\\s]")
         val whitespace = Regex("\\s*")
@@ -19,7 +19,7 @@ class Lexical(viewModel: TokenViewModel){
 
     var tokenCount: Int = 0
 
-    val tokenHash = hashSetOf<String>("start","+","-","*","=","<=",">=","==","<",">","!=","!","{","}","[","]","(",")","~","dec","tiny","mid","big","being","fact","wrong")
+    val tokenHash = hashSetOf<String>("start","+","-","*","=","%",">=","==","<",">","!=","!","{","}","[","]","(",")","~","dec","tiny","mid","big","being","fact","wrong")
     fun countTokens(strList: List<String>):Int{
         for(i in strList){
             if(tokenHash.contains(i)){

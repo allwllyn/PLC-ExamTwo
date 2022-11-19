@@ -1,0 +1,7 @@
+
+start{
+dec $newone = 123t~
+dec $asdfke = 234b~
+being(9t > 94587b){1s + 1s}
+dec $coding = 587t~
+}
