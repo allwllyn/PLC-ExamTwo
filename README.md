@@ -23,12 +23,6 @@ clearly define integer token codes for each token required for this language <br
     separator = Regex("[{}|\\[|\\]|(|)|~]")
 
 b. (15 Points) Define production rules for implementing the mathematical syntax of operators and operands, loops, variable declaration, selection statements<br/>
-    • Enforce a non PEMDAS (BODMAS) order of operation, must have at least 6 levels of precedence<br/>
-    • Keywords cannot use the words while, for, do, if, int, short, long<br/>
-        i. Keywords should be unique, if others share your same words, you<br/>
-    may lose more points than this problem is worth<br/>
-    • You must clearly state the structure of your language with production
-    rules<br/>
 
  Rules —————————————————————————————————————————————————————————————————<br/>
  Regular expressions for these tokens in the github readme and in Lexical.kt<br/>
@@ -66,14 +60,11 @@ standard of an LL Grammar.<br/>
 ## There is no left-hand recursion, and no two rules begin the same way, so it is also pairwise disjoint.
 
 d. (5 points) Make sure it is not ambiguous grammar<br/>
+    
+## Constructed with EBNF rules, LR tables suggest there is only one way to achieve a given final string of terminals
 
 e. (15 points) Write a program that process all lexemes in a file by recognizing all
 tokens in a file, and produces a list of those tokens in order<br />
-    • If a group of characters is not defined in your language your program
-    should print an error message stating what went wrong and terminate<br />
-    • This program should be written in an Object-Oriented fashion<br />
-    • This program should have comments to describe each method that is
-    defined<br />
     
 ## see Lexical.kt in src/main/kotlin/Analyzer*<br/>
 
@@ -85,12 +76,12 @@ determines if the tokens conform to the correct syntax.<br/>
 g. (10 points) Create 4 test files that have different names where each should have
 30 or more lexemes that can be converted into tokens<br/><br/>
     Lexical errors are in test_three.txt, or val C in main.kt.<br/>
-        Errors are: <br />
+        Errors are: newone does not begin with $; asdfke does not begin with $; factoid is not a keyword; several unrecognized words after this <br />
     Syntax errors are in test_two.txt, or val B in main.ket.<br/>
-        Error are: <br />
+        Error are: doesn't begin with 'start'; unmatched left paren; unmatched left paren; being statement missing a boolean expression; unmatched ending curly brace <br />
 
 h. (20 points) Create a LR (1) parse table for your language. And show the trace of 4
-code samples. Each must have 6 or more tokens.<br/><br/>
+code samples. Each must have 6 or more tokens.<br/>
     
     PDFs uploaded to iCollege<br/>
     Error in LR(1)ParserGenerator_Error_1, needs another set of parentheses<br/>
