@@ -66,12 +66,12 @@ d. (5 points) Make sure it is not ambiguous grammar<br/>
 e. (15 points) Write a program that process all lexemes in a file by recognizing all
 tokens in a file, and produces a list of those tokens in order<br />
     
-## see Lexical.kt in src/main/kotlin/Analyzer*<br/>
+## see Lexical.kt in src/main/kotlin/Analyzer<br/>
 
 f. (10 points) Write a program or an extension to the above program that
 determines if the tokens conform to the correct syntax.<br/>
 
-## see Syntactic.kt in src/main/kotlin/Analyzer*<br/>
+## see Syntactic.kt in src/main/kotlin/Analyzer<br/>
 
 g. (10 points) Create 4 test files that have different names where each should have
 30 or more lexemes that can be converted into tokens<br/><br/>
